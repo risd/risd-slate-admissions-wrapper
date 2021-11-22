@@ -1,0 +1,35 @@
+.c_page.cr {
+  margin-top:  0;
+}
+
+.no-touch .global-header .primary-nav__back:hover {
+  background-color: white;
+}
+
+.no-touch .global-header .primary-nav__link-toggle:hover {
+  background-color:  transparent;
+}
+
+.global-header button {
+  padding: 0;
+}
+
+.global-header .wordmark {
+  fill: white;
+}
+
+.global-header #edit-search-site {
+  font-family: "Mercury Display A", "Mercury Display B", Georgia, serif !important;
+}
+
+.global-header input[type="text"] {
+  padding: 0;
+}
+
+.global-header #edit-actions-submit {
+  background-image:url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNiAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE0Ljk3MzkgMC45MjUwNDlDMTQuOTczOSA1LjUzNjQ2IDE0Ljk3MzkgMTIuNzMzMyAxNC45NzM5IDEyLjczMzNIMS44Nzc5M00xLjg3NzkzIDEyLjczMzNMNi4xOTkzNSA4LjQxMTg5TTEuODc3OTMgMTIuNzMzM0w2LjE5OTM1IDE3LjA1NDciIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4=');  
+}
+
+.global-header #edit-actions-submit:hover {
+  background-color: white;
+}
