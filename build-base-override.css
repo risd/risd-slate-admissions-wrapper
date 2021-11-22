@@ -33,3 +33,7 @@
 .global-header #edit-actions-submit:hover {
   background-color: white;
 }
+
+.global-header .utility-nav__item {
+  padding-left: 0;
+}
