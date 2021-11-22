@@ -11,9 +11,9 @@
         <style>html &gt; body { line-height: normal; } ul.cr, li.cr { margin: 0; padding: 0; } #content { clear: both; padding: 15px; } #global { float: right; } #global ul, #global li { list-style: none; margin: 0; padding: 0; }</style>
         <!-- risd media global nav : head : start -->
         <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/641934/6854832/css/fonts.css" />
-        <link rel="stylesheet" href="https://edu.risd.systems/localist/for-drupal/css_jmeyrjQvEAgApJJGXkG7X415NGVrp2tRCTw4xd4s4Gg.css"/>
+        <link rel="stylesheet" href="https://shared.risd.systems/global-nav/static/css_jmeyrjQvEAgApJJGXkG7X415NGVrp2tRCTw4xd4s4Gg.css"/>
         <link rel="stylesheet" href="/shared/build-base-override.css"/>
-        <script src="https://edu.risd.systems/localist/for-drupal/11.bundle.js" charset="utf-8"></script>
+        <script src="https://shared.risd.systems/global-nav/static/11.bundle.js" charset="utf-8"></script>
         <!-- risd media global nav : head : end -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0" class="cr" />
         <script>
@@ -544,7 +544,7 @@ Providence, RI 02903-2784<br class="cr" /></a>
         </div>
 
         <!-- risd media global nav : end of body : start -->
-        <script src="https://edu.risd.systems/localist/for-drupal/js_5--D5zmB8Qcz0oSUZ7AHoGTQl4fi6odAWbaqwMisA_c.js" charset="utf-8"></script>
+        <script src="https://shared.risd.systems/global-nav/static/js_5--D5zmB8Qcz0oSUZ7AHoGTQl4fi6odAWbaqwMisA_c.js" charset="utf-8"></script>
         <!-- risd media global nav : end of body : end -->
       </body>
     </html>
