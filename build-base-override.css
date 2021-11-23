@@ -37,3 +37,94 @@
 .global-header .utility-nav__item {
   padding-left: 0;
 }
+
+.site__footer-simplified {
+  position: relative;
+  z-index: 500;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+  padding: calc(16px * 6) 0 calc(16px * 4);
+  background-color: black;
+  color: white;
+}
+
+.site__footer-simplified .footer__container {
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1152px;
+  -ms-flex-preferred-size: 90%;
+      flex-basis: 90%;
+  -ms-flex-flow: column wrap;
+      flex-flow: column wrap;
+  -ms-flex-align: center;
+      align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media screen and (min-width: 513px) {
+  .site__footer-simplified .footer__container {
+    -ms-flex-preferred-size: 95%;
+        flex-basis: 95%;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-align: stretch;
+        align-items: stretch;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .site__footer-simplified .footer__container {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+.site__footer-simplified .footer__logo {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0; }
+  .site__footer-simplified .footer__logo img {
+    max-width: 130px;
+    height: auto; }
+  .site__footer-simplified .footer__logo svg {
+    height: auto; }
+  .site__footer-simplified .footer__logo path,
+  .site__footer-simplified .footer__logo circle {
+    fill: rgb(85, 85, 85); }
+
+.site__footer-simplified .footer__logo--simplified {
+  display: block;
+  width: 70px; }
+  @media screen and (min-width: 513px) {
+    .site__footer-simplified .footer__logo--simplified {
+      display: none; } }
+
+.site__footer-simplified .footer__logo--full {
+  display: none;
+  width: 207px; }
+  @media screen and (min-width: 513px) {
+    .site__footer-simplified .footer__logo--full {
+      display: block; } }
+
+.site__footer-simplified .footer__copyright {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -ms-flex-preferred-size: 90%;
+      flex-basis: 90%;
+  padding: 16px 0;
+  margin-top: 16px;
+  color: rgb(85, 85, 85);
+  text-align: center; }
+  @media screen and (min-width: 513px) {
+    .site__footer-simplified .footer__copyright {
+      -ms-flex-preferred-size: 95%;
+          flex-basis: 95%; } }
+  @media screen and (min-width: 1025px) {
+    .site__footer-simplified .footer__copyright {
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%; } }
