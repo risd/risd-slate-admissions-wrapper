@@ -128,3 +128,8 @@
     .site__footer-simplified .footer__copyright {
       -ms-flex-preferred-size: 100%;
           flex-basis: 100%; } }
+
+/* hide featured sites section for fear of being out of sync with  www */
+.global-header .utility-nav {
+  display:  none;
+}
