@@ -11,8 +11,7 @@
         <style>html &gt; body { line-height: normal; } ul.cr, li.cr { margin: 0; padding: 0; } #content { clear: both; padding: 15px; } #global { float: right; } #global ul, #global li { list-style: none; margin: 0; padding: 0; }</style>
         <!-- risd media global nav : head : start -->
         <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/641934/6854832/css/fonts.css" />
-        <link rel="stylesheet" href="https://shared.risd.systems/global-nav/static/css_jmeyrjQvEAgApJJGXkG7X415NGVrp2tRCTw4xd4s4Gg.css"/>
-        <link rel="stylesheet" href="https://shared.risd.systems/global-nav/static/overrides.css"/>
+        <link rel="stylesheet" href="https://shared.risd.systems/global-nav/static/style.css"/>
         <link rel="stylesheet" href="/shared/build-base-override.css"/>
         <script src="https://shared.risd.systems/global-nav/static/11.bundle.js" charset="utf-8"></script>
         <!-- risd media global nav : head : end -->
