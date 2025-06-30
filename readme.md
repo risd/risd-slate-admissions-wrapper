@@ -11,3 +11,8 @@ relevant urls:
 
 - [development](https://rsd.test.technolutions.net/manage/database/file)
 - [production](https://admissions.risd.edu/manage/database/file)
+
+### link reference
+
+- [Files](/manage/database/file), this is where global templates and styles are maintained
+- [Portals](/manage/database/portal/?folder=Start%20Application%20Portal), where site states can be impersonated. Use Takeya's records.
