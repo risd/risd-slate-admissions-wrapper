@@ -69,7 +69,7 @@ button.cr { cursor: pointer; outline: 0px; }
 @media screen and (min-width: 961px) { .c_global-nav__link.cr[data-page="giving"] { order: 14; } }
 @media screen and (min-width: 961px) { .c_global-nav__link.cr[data-page="support"] { order: 9; } }
 .c_page.cr { font-size: 14px; line-height: 1.71429; display: flex; min-height: 100vh; margin-top: 72px; flex-direction: column; color: #555; font-weight: 400; }
-.c_page-content.cr { margin-top: 1rem; margin-bottom: 1rem; }
+.c_page-content.cr { margin-top: 4rem !important; margin-bottom: 1rem; }
 .c_page-content__title-container.cr { position: relative; display: flex; max-width: 1152px; margin-right: auto; margin-bottom: 1rem; margin-left: auto; }
 @media screen and (min-width: 961px) { .c_page-content__title-link.cr { display: block; } }
 .c_page-content__title.cr { font-size: 18px; line-height: 1.33333; background-color: #00852a; display: none; padding: 1rem; color: #fff; font-weight: 700; letter-spacing: 0.05em; text-decoration: none; text-transform: uppercase; }
