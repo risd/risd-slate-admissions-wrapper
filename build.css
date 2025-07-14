@@ -4,6 +4,9 @@
   --risd-color-white: #FFF;
   --risd-color-off-white: #F5F5F3;
 
+  --risd-heading-font-weight: 300;
+  --risd-body-font-weight: 400;
+
   /* risd refactor h2 */
   --risd-h1-font-size: 48px;
   --risd-h1-line-height: 56px;
@@ -96,13 +99,13 @@
 :is(h1, h2, h3, h4, h5),
 .font-common-heading {
   font-family: var(--risd-serif);
-  font-weight: 300;
+  font-weight: var(--risd-heading-font-weight);
 }
 
 :is(.font-body-lg, .font-body-xl, .font-body-xxl, p, caption),
 .font-common-sans {
   font-family: var(--risd-sans);
-  font-weight: 400;
+  font-weight: var(--risd-body-font-weight);
 }
 
 h1, .font-h1 {

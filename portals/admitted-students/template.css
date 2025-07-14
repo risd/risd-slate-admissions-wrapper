@@ -1,0 +1,283 @@
+/* admitted students */
+
+:root {
+  --cta-border-width: 2px;
+  --cta-border-color-default: var(--risd-color-black);
+  --cta-border-color-active: var(--risd-color-blue);
+  --cta-background-color-default: var(--risd-color-white);
+  --cta-background-color-active: var(--risd-color-blue);
+  --cta-color-default: var(--risd-color-black);
+  --cta-color-active: var(--risd-color-white);
+}
+
+h2 {
+  font-family: var(--risd-serif) !important;
+  font-weight: var(--risd-heading-font-weight) !important;
+
+  font-size: var(--risd-h2-font-size) !important;
+  line-height: var(--risd-h2-line-height) !important;
+  letter-spacing: var(--risd-h2-letter-spacing) !important;
+  color: var(--risd-color-black) !important;
+}
+
+:is(p, a, td, button.default, label, label.form_label) {
+  font-family: var(--risd-sans) !important;
+  font-weight: var(--risd-body-font-weight) !important;
+
+  font-size: var(--risd-p-font-size) !important;
+  line-height: var(--risd-p-line-height) !important;
+  letter-spacing: var(--risd-p-letter-spacing) !important;
+  width: auto;
+}
+
+main a, a:is(:visited, :hover, :active, :focus) {
+  color: var(--risd-color-black) !important;
+  border-bottom: 2px solid var(--risd-color-blue);
+  text-decoration: none !important;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: start;
+  max-width: 475px;
+}
+form > * {
+  width: 100%;
+}
+
+.part_rows_container>div.part {
+  margin-bottom: 2em;
+}
+
+.part h3 {
+  margin-bottom: 1em;
+}
+
+div > ul.subt {background-color: ffffff;}
+
+.mcnButtonContentContainer {
+  border: none !important;
+}
+.mcnButton {
+  border-bottom: none !important;
+}
+:is(.no-touch, .supports-touch) button.default,
+.mcnButtonContent,
+.mcnButton {
+  background-color: var(--cta-background-color-default) !important;
+  color: var(--cta-color-default) !important;
+}
+:is(.no-touch, .supports-touch) button.default,
+.mcnButtonContent {
+  border: 2px solid var(--cta-border-color-default) !important;
+}
+:is(.no-touch, .supports-touch) button.default:is(:hover, :focus, :active),
+.mcnButtonContent:is(:hover, :focus, :active),
+.mcnButtonContent:is(:hover, :focus, :active) .mcnButton {
+  background-color: var(--cta-background-color-active) !important;
+  color: var(--cta-color-active) !important;
+}
+:is(.no-touch, .supports-touch) button.default:is(:hover, :focus, :active),
+.mcnButtonContent:is(:hover, :focus, :active) {
+  border: 2px solid var(--cta-border-color-active) !important;
+}
+#content ul.subtabs li a {
+  background-color: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid var(--risd-color-blue);
+  padding:0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  height: auto;
+}
+
+ul.subtabs li:first-child{
+background-color: transparent;
+padding:0px;
+margin-left: 0px;
+margin-right: 20px;
+}
+
+
+ul.subtabs li:last-child{
+background-color: transparent;
+padding:0px;
+margin-left: 20px;
+margin-right: 0px;
+}
+
+ul.subtabs li a:focus {
+border-bottom: 1px solid #2454ff !important;
+}
+
+.form_label {
+max-width: 450px;
+padding-bottom:5px;
+}
+
+:is(button:is(.default), input) {
+  margin-left: 0px !important;
+}
+
+#content .part :is(a, a:link, span) {
+  font-family: var(--risd-sans) !important;
+  font-weight: var(--risd-body-font-weight) !important;
+  letter-spacing: var(--risd-p-letter-spacing) !important;
+
+}
+
+@media only screen and (max-width: 736px) and (min-width: 320px)
+#part_f2735504-3242-46b7-a8bb-a77f6ef7e12f #content_body table.fixed tbody tr td{{padding-bottom:0px; }}
+
+ul.subtabs li a:hover { background-color: transparent !important; }
+
+
+
+.statusUpdateBox > div {
+  padding: 40px 40px 30px;
+  border: 1px solid var(--risd-color-black) !important;
+  background-color: var(--risd-color-white) !important;
+  color: var(--risd-color-black) !important;
+}
+#part_0b3d86db-30fb-456f-8048-c17ba458e4e2.statusUpdateBox > div, #part_34ae8018-acbf-4301-920b-3eeb1957b92e.statusUpdateBox > div, #part_5bf7adcd-8934-4d9d-9331-8f70310f28c8.statusUpdateBox > div, #part_fe7a70f8-c186-4d4c-8d36-dccf3cab6430.statusUpdateBox > div {padding: 40px !important; border: 1px solid #2454ff !important; background-color: #ffffff !important; color: #000000 !important;}
+.paddingLeft {
+  margin-left: 40px;
+}
+
+.statusUpdateBox2 > div {padding: 20px 20px 10px; background-color: #2454ff !important; color: #ffffff !important;}
+#part_0b3d86db-30fb-456f-8048-c17ba458e4e2.statusUpdateBox2 > div {padding: 20px; background-color: #2454ff !important; color: #ffffff !important;}
+#content .statusUpdateBox2.part a {
+  color: var(--risd-color-white) !important;
+  border-bottom-color: var(--risd-color-white);
+}
+
+
+
+/*.paddingLeft button.default {
+    border: 1px solid var(--risd-color-black);
+    font-weight: bold;
+    background-color: var(--risd-color-white);
+    border-radius: 0px !important;
+    padding: 15px !important;
+    color: var(--risd-color-black);
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.paddingLeft button.default:hover {
+        background-color: #ffffff;
+}*/
+
+.paddingRight {
+  margin-right: 40px;
+}
+
+/*
+   h3 {
+      display:block;
+      margin:0;
+      padding:0;
+       text-transform: uppercase;
+    }*/
+
+div#part_checklist_International > h3, div#part_1e662293-5e95-41ed-9bd9-fb233cf041f5 > h3, div#part_54e78eeb-660d-4dec-82c1-047705979d5e > h3 {
+  /*@editable*/color: var(--risd-color-black);
+      /*@editable*/font-family: var(--risd-serif);
+      /*@editable*/font-size: var(--risd-h3-font-size);
+      /*@editable*/font-style:normal;
+      /*@editable*/font-weight: var(--risd-heading-font-weight);
+      /*@editable*/line-height: var(--risd-h3-line-height);
+      /*@editable*/letter-spacing: var(--risd-h3-letter-spacing);
+      /*@editable*/text-align:left;
+  text-transform: none;
+    }
+
+
+div#part_1e662293-5e95-41ed-9bd9-fb233cf041f5 > h3 {
+
+    padding-top: 20px;
+
+}
+
+
+div#part_1e662293-5e95-41ed-9bd9-fb233cf041f5 p, div#part_54e78eeb-660d-4dec-82c1-047705979d5e p {
+  text-align: left;
+    color: var(--risd-color-black);
+    font-family: var(--risd-sans);
+    font-size: var(--risd-p-font-size);
+    line-height: var(--risd-p-line-height);
+    text-align: left;
+    padding-top: 15px;
+}
+
+
+div#part_54e78eeb-660d-4dec-82c1-047705979d5e > div {
+
+    color: var(--risd-color-black);
+    font-family: var(--risd-sans);
+    font-size: var(--risd-p-font-size);
+    line-height: var(--risd-p-line-height);
+      padding-top: 15px;
+}
+
+
+
+.part div#part_54e78eeb-660d-4dec-82c1-047705979d5e a, .part div#part_54e78eeb-660d-4dec-82c1-047705979d5e a:link {
+
+   text-decoration: underline;
+}
+
+.title-1 span {
+  color: var(--risd-color-black) !important;
+  font-size: var(--risd-body-lg-font-size) !important;
+  line-height: var(--risd-body-lg-line-height) !important;
+  letter-spacing: var(--risd-body-lg-letter-spacing) !important;
+  text-transform: none !important;
+}
+
+.part.chooseyourmajorBlock {
+  padding: 0;
+}
+.chooseyourmajorBlock {
+  background-color: var(--risd-color-white) i !important;
+  color: var(--risd-color-black) !important;
+}
+.chooseyourmajorBlock label.form_label {
+  margin: 10px 0 5px;
+}
+.chooseyourmajorBlock label.form_label,
+.chooseyourmajorBlock label.form_label span,
+.chooseyourmajorBlock input,
+.chooseyourmajorBlock div.form_response input+label,
+.chooseyourmajorBlock div.form_label,
+.chooseyourmajorBlock div.form_label a {
+  font-size: var(--risd-body-lg-font-size) !important;
+  text-transform: none !important;
+  color: var(--risd-color-black) !important;
+}
+.chooseyourmajorBlock input:is([type="text"], [type="tel"]) {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid var(--risd-color-black);
+  padding: 0 12px 8px 0;
+}
+.chooseyourmajorBlock .form_page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2em;
+}
+.chooseyourmajorBlock div.form_response input+label {
+  margin-left: 0;
+}
+.chooseyourmajorBlock button.default {
+  font-size: var(--risd-body-lg-font-size) !important;
+}
+.chooseyourmajorBlock div.form_label a {
+  color: var(--risd-color-blue) !important;
+}

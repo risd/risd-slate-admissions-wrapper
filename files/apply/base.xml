@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<application xmlns:fw="http://technolutions.com/framework">
+  <menu xmlns="http://technolutions.com/framework">
+    <link id="home?apply" roundKey="GR,TR,VS">Home</link>
+    <link id="frm?b07fe5de-9c4c-4020-8137-932c6618396a" roundKey="TR,GR">Instructions</link>
+    <link id="frm?304dee02-6d96-4b28-a0bd-c1ad8986aeb7" roundKey="GR">Program Information</link>
+    <link id="frm?52969f2f-258f-4e99-bf4b-9e5a799f3e7d" roundKey="TR">Major of Interest</link>
+    <link id="frm?ce557b37-5f3c-4b84-9abd-3992bba83dec" roundKey="GR,TR">Biographic Information</link>
+    <link id="frm?150df3e7-62e9-4923-931c-bfb40fda5bbe" roundKey="GR,TR">Additional Information</link>
+    <link id="frm?514798b3-0df9-40f6-aa1d-7e8bccbdd583" roundKey="GR,TR">Academic History</link>
+    <link id="tes" pageKey="Test Scores" roundKey="TR">Test Scores</link>
+    <link id="frm?0ce43cad-60d8-4364-ab49-8c87067fc744" roundKey="GR,TR">Recommendations</link>
+    <link id="frm?14865da2-3594-422e-9890-94721e519ec1" roundKey="GR,TR">Statement of Purpose</link>
+    <link id="frm?0f9731f5-2346-4aa3-a78c-e9bf3b4117bc" pageKey="Writing Sample" roundKey="GR">Writing Sample</link>
+    <link id="frm?263c758b-d9bc-476a-89ef-71a1bbab64b7" pageKey="Optional Writing Supplement" roundKey="GR">Writing Supplement</link>
+    <link id="frm?a9e3e0bb-d529-4607-8732-8a9f7af8ffbf" roundKey="GR,TR">Resume</link>
+    <link id="frm?0c217d49-b37d-4b6f-9fd9-fec865ae0199" roundKey="GR">Other Documents</link>
+    <link id="frm?3fd3b6d2-17a9-48a6-b115-4cdad7d645aa" pageKey="Video Essay" roundKey="GR">Video Essay Instructions</link>
+    <link id="frm?3a6fbee8-1277-4ea3-9ce9-3acf6ac9d57d" pageKey="Photo Essay" roundKey="GR">Photography Essay</link>
+    <link id="frm?0a798282-45ab-4cad-9311-ae965619a38b" pageKey="Portfolio Instructions" roundKey="GR,TR">Portfolio Instructions</link>
+    <link id="certify" roundKey="GR,TR">Signature</link>
+    <link id="review" roundKey="GR,TR">Review</link>
+    <link id="status" roundKey="ED,RD,TR,VS,FT">Applicant Portal</link>
+  </menu>
+  <part id="app?payment">
+  </part>
+  <part id="job">
+  </part>
+  <part id="act">
+  </part>
+  <part id="tes">
+  </part>
+  <part id="aca">
+    <type id="U">Undergraduate</type>
+    <type id="G">Graduate</type>
+    <p>
+      <k>autocomplete</k>
+      <v>1</v>
+    </p>
+    <p>
+      <k>key_display</k>
+      <v>1</v>
+    </p>
+    <p>
+      <k>help</k>
+      <v>
+        <html xmlns="http://www.w3.org/1999/xhtml">
+          <head>
+            <title>
+            </title>
+          </head>
+          <body>
+Please list all colleges you have attended.<br />
+&#xA0;
+</body>
+        </html>
+      </v>
+    </p>
+    <p>
+      <k>rank</k>
+      <v>0</v>
+    </p>
+    <p>
+      <k>upload</k>
+      <v>1</v>
+    </p>
+    <p>
+      <k>gpa</k>
+      <v>0</v>
+    </p>
+    <p>
+      <k>language</k>
+      <v>0</v>
+    </p>
+    <p>
+      <k>major2</k>
+      <v>0</v>
+    </p>
+    <p>
+      <k>minor</k>
+      <v>0</v>
+    </p>
+    <p>
+      <k>gpa_help</k>
+      <v>0</v>
+    </p>
+    <p>
+      <k>transcript_help_override</k>
+      <v>
+        <html xmlns="http://www.w3.org/1999/xhtml">
+          <head>
+            <title>
+            </title>
+          </head>
+          <body>
+            <p>Please upload an unofficial&#xA0;transcript from this institution. You may upload those pages&#xA0;as a single- or multi-page PDF, or each page as a JPEG or TIFF image file.<br /><br /><em>Enrolling students will later be required to submit official transcripts.</em></p>
+          </body>
+        </html>
+      </v>
+    </p>
+  </part>
+  <part id="per">
+    <p>
+      <k>help</k>
+      <v>
+        <html xmlns="http://www.w3.org/1999/xhtml">
+          <head>
+            <title>
+            </title>
+          </head>
+          <body>
+            <div>Please tell us a little more about yourself. &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; <strong>&#xA0;* = required</strong></div>
+          </body>
+        </html>
+      </v>
+    </p>
+    <p>
+      <k>prefix</k>
+      <v>0</v>
+    </p>
+    <p>
+      <k>first</k>
+      <v>Given Name *</v>
+    </p>
+    <p>
+      <k>last</k>
+      <v>Last (Family) Name  *</v>
+    </p>
+    <p>
+      <k>alias</k>
+      <v>Former Last Name</v>
+    </p>
+    <p>
+      <k>sex</k>
+      <v>Sex*</v>
+    </p>
+    <p>
+      <k>citizenship</k>
+      <v>Citizenship* </v>
+    </p>
+    <p>
+      <k>business</k>
+      <v>0</v>
+    </p>
+    <p>
+      <k>preferred</k>
+      <v>Preferred First Name</v>
+    </p>
+    <p>
+      <k>mobile</k>
+      <v>Cell Phone*</v>
+    </p>
+    <p>
+      <k>biographical_help</k>
+      <v>Federal guidelines require that we collect students' sex for reporting purposes.</v>
+    </p>
+    <p>
+      <k>ssn</k>
+      <v>Social Security Number</v>
+    </p>
+    <p>
+      <k>race_foreign</k>
+      <v>1</v>
+    </p>
+    <p>
+      <k>phone</k>
+      <v>Home Phone</v>
+    </p>
+    <p>
+      <k>middle</k>
+      <v>Middle Name</v>
+    </p>
+    <p>
+      <k>title</k>
+      <v>Biographic Information</v>
+    </p>
+    <p>
+      <k>race_help</k>
+      <v>The questions in this section, while helpful to colleges, are entirely optional, and you're welcome to move on without answering them.</v>
+    </p>
+    <p>
+      <k>tribal</k>
+      <v>0</v>
+    </p>
+    <p>
+      <k>hispanic</k>
+      <v>Are you Hispanic or Latinx?</v>
+    </p>
+    <p>
+      <k>visa</k>
+      <v>0</v>
+    </p>
+  </part>
+  <part id="ref">
+    <p>
+      <k>help</k>
+      <v>
+        <html xmlns="http://www.w3.org/1999/xhtml">
+          <head>
+            <title>
+            </title>
+          </head>
+          <body>
+You should arrange to have at least two (and no more than 4) letters of recommendation written by professors, instructors, or professionals with whom you have recently worked or studied.&#xA0;&#xA0;These letters are required, but you do not need to wait for the letter requests to be fulfilled before submitting your application.<br />
+&#xA0;
+</body>
+        </html>
+      </v>
+    </p>
+    <p>
+      <k>offline</k>
+      <v>0</v>
+    </p>
+    <p>
+      <k>upload</k>
+      <v>Recommendation Letter</v>
+    </p>
+    <p>
+      <k>waiver</k>
+      <v>
+      </v>
+    </p>
+    <p>
+      <k>personal_message</k>
+      <v>1</v>
+    </p>
+    <p>
+      <k>personal_message_help</k>
+      <v>Add a message that will be sent to your recommender with your request. </v>
+    </p>
+  </part>
+  <part id="certify">
+    <p>
+      <k>help</k>
+      <v>
+        <html xmlns="http://www.w3.org/1999/xhtml">
+          <head>
+            <title>
+            </title>
+          </head>
+          <body>
+I certify that all information submitted in the admissions process &#x2013; including the application, the personal essay, any supplements, and any other supporting materials such as the portfolio &#x2013; is my own work, factually true, and honestly presented. I understand that I may be subject to a range of possible disciplinary actions, including admission revocation, expulsion, or revocation of course credit, grades, and degree, should the information I have certified be false.<br />
+&#xA0;
+</body>
+        </html>
+      </v>
+    </p>
+  </part>
+  <part id="review">
+    <p>
+      <k>help</k>
+      <v>
+        <html xmlns="http://www.w3.org/1999/xhtml">
+          <head>
+            <title>
+            </title>
+          </head>
+          <body>
+            <p>
+      Please review each page of the application.&#xA0;Once you submit, you will be unable to make changes.&#xA0;However,&#xA0;you will be able to send reminders to and manage your recommenders.<br /><br />
+      By pressing submit, you attest that all of the information you are providing is true to the best of your knowledge and you understand and agree that RISD reserves the right to deny admission or permission to register for any reason it considers sufficient.
+    </p>
+          </body>
+        </html>
+      </v>
+    </p>
+    <p>
+      <k>submit_text_pay</k>
+      <v>Submit Application and Pay</v>
+    </p>
+  </part>
+  <part id="upl?portfolio">
+    <p>
+      <k>video</k>
+      <v>1</v>
+    </p>
+    <p>
+      <k>audio</k>
+      <v>1</v>
+    </p>
+    <p>
+      <k>slide</k>
+      <v>1</v>
+    </p>
+    <p>
+      <k>document</k>
+      <v>1</v>
+    </p>
+    <p>
+      <k>link</k>
+      <v>1</v>
+    </p>
+  </part>
+  <part id="status">
+    <p>
+      <k>checklist_help</k>
+      <v>
+        <html xmlns="http://www.w3.org/1999/xhtml">
+          <head>
+            <title>
+            </title>
+          </head>
+          <body>
+            <span style="color:#FF0000;">
+              <em>&#xA0; &#xA0; &#xA0;</em>
+            </span>
+            <em>
+              <strong>Note:</strong>
+            </em>
+            <strong>&#xA0;&#xA0;</strong>
+            <em>It may take up to 30 minutes for uploaded materials to be marked as received.</em>
+            <br />
+&#xA0;
+</body>
+        </html>
+      </v>
+    </p>
+    <p>
+      <k>address_delete</k>
+      <v>0</v>
+    </p>
+    <p>
+      <k>address_edit</k>
+      <v>0</v>
+    </p>
+    <p>
+      <k>checklist_finaid_help</k>
+      <v>
+        <html xmlns="http://www.w3.org/1999/xhtml">
+          <head>
+            <title>
+            </title>
+          </head>
+          <body>
+Please note that financial aid requirements can vary based on your individual circumstances.&#xA0; After you submit the FAFSA and Profile, please recheck your portal from time to time as we may need additional information.&#xA0; We will update your list as your circumstances are evaluated.<br /><br />
+**It can take up to a week from the time you submit your CSS Profile or FAFSA for it to show as received here. If you have questions about the status of your financial aid application, please call our office at (401)&#xA0;454-6661 or email <a href="mailto:sfs@risd.edu">sfs@risd.edu</a>.<br /><br />
+&#xA0;
+</body>
+        </html>
+      </v>
+    </p>
+    <p>
+      <k>address</k>
+      <v>0</v>
+    </p>
+    <p>
+      <k>ref_edit</k>
+      <v>0</v>
+    </p>
+  </part>
+  <part id="default">
+    <p>
+      <k>title</k>
+      <v>Admissions Portal</v>
+    </p>
+    <p>
+      <k>help</k>
+      <v>
+        <html xmlns="http://www.w3.org/1999/xhtml">
+          <head>
+            <title>
+            </title>
+          </head>
+          <body>
+    Based on the link you clicked to arrive on this page, you will see the appropriate application after you create a new account or log in with your existing account. The applications accessible from this site are for admission to RISD's <strong>Pre-College Program</strong> and <strong>Shanghai Summer Teen Art Institute.</strong><br /><br /><strong>Pre-College</strong> students must apply by first <a href="https://admissions.risd.edu/account/register?r=https%3a%2f%2fadmissions.risd.edu%2fapply%2f%3fsr%3d73a75695-561e-441e-aabc-067bec359da3">creating an account</a> and then starting a new application for the 2025 Pre-College program. If you have any questions, please contact the Pre-College office at precollege@risd.edu.<br /><strong><br />
+    Summer Teen Art Institute</strong> students must apply by first <a href="https://admissions.risd.edu/account/register?r=https%3a%2f%2fadmissions.risd.edu%2fapply%2f%3fsr%3dad527dab-6e07-47e3-80f7-6ed87c9c4b13">creating an account</a> and then starting a new application for the 2025 STAI program. If you have any questions, please contact the Continuing Education office at risdce@risd.edu.<br />
+    &#xA0;
+  </body>
+        </html>
+      </v>
+    </p>
+  </part>
+  <part id="login">
+  </part>
+  <part id="register">
+  </part>
+  <part id="vid">
+    <p>
+      <k>help</k>
+      <v>
+        <html xmlns="http://www.w3.org/1999/xhtml">
+          <head>
+            <title>
+            </title>
+          </head>
+          <body>
+            <p>Prepare a short video of yourself telling us;&#xA0;</p>
+            <blockquote>
+              <p>1. The most important reason you are motivated to study landscape architecture&#xA0;</p>
+              <p>2. At least one goal you hope to achieve in your graduate education&#xA0;</p>
+              <p>3. Why you think RISD is the best place to achieve your goals. &#xA0;</p>
+            </blockquote>
+            <p>You are encouraged to be authentic and heartfelt in your response. This essay will function as the beginning of a conversation you will continue to have if you enter the program at RISD and it does not have to be the same information provided in your written essay. Cell phone videos are accepted as well. Maximum length: 2 minutes.</p>
+          </body>
+        </html>
+      </v>
+    </p>
+  </part>
+  <part id="upl?test_resume">
+    <p>
+      <k>help</k>
+      <v>
+        <html xmlns="http://www.w3.org/1999/xhtml">
+          <head>
+            <title>
+            </title>
+          </head>
+          <body>
+If you would like to attach a resume or CV, please do so here. You may upload PDF or Word documents only.
+</body>
+        </html>
+      </v>
+    </p>
+  </part>
+  <part id="upl?other">
+    <p>
+      <k>help</k>
+      <v>
+        <html xmlns="http://www.w3.org/1999/xhtml">
+          <head>
+            <title>
+            </title>
+          </head>
+          <body>
+If you would like to attach any other documents to your application, please do so here. You may upload PDF or Word documents only. Please do not attach statements of purpose or resumes/CV here. Use the previous questions designated for those purposes.
+</body>
+        </html>
+      </v>
+    </p>
+  </part>
+  <part id="upl?mfa_photography_essay">
+    <p>
+      <k>help</k>
+      <v>
+        <html xmlns="http://www.w3.org/1999/xhtml">
+          <head>
+            <title>
+            </title>
+          </head>
+          <body>
+Please describe the work included in your portfolio.
+</body>
+        </html>
+      </v>
+    </p>
+  </part>
+  <part id="payment">
+    <provider />
+    <p>
+      <k>provider</k>
+      <v>slate_test</v>
+    </p>
+    <p>
+      <k>payment_account</k>
+      <v>3730d906-4588-467a-aa07-9bd7141aa2ac</v>
+    </p>
+    <p>
+      <k>checking</k>
+      <v>0</v>
+    </p>
+    <p>
+      <k>credit</k>
+      <v>1</v>
+    </p>
+  </part>
+  <part id="upl?statementofpurpose">
+    <p>
+      <k>help</k>
+      <v>
+        <html xmlns="http://www.w3.org/1999/xhtml">
+          <head>
+            <title>
+            </title>
+          </head>
+          <body>
+            <p>Use the below space to type/cut + paste a written statement (500&#x2013;750 words) outlining your interest and goals in pursuing graduate study.</p>
+            <p>
+              <em>Note: The&#xA0;Landscape Architecture, Photography, and Teaching + Learning in Art + Design&#xA0;Departments&#xA0;require or suggest more specific ideas or requirements for your statement of purpose. To view these recommendations, please visit our <a href="http://www.risd.edu/Admissions/Apply/Graduates/">Graduate Admissions</a> page.</em>
+            </p>
+          </body>
+        </html>
+      </v>
+    </p>
+  </part>
+  <part id="upl?transcript">
+    <p>
+      <k>help</k>
+      <v>
+        <html xmlns="http://www.w3.org/1999/xhtml">
+          <head>
+            <title>
+            </title>
+          </head>
+          <body>
+Please upload an unofficial copy of your college transcript. If you can not supply a transcript, please contact the Admissions Office at admissions@risd.edu.
+</body>
+        </html>
+      </v>
+    </p>
+  </part>
+  <part id="upl?resume">
+    <p>
+      <k>help</k>
+      <v>
+        <html xmlns="http://www.w3.org/1999/xhtml">
+          <head>
+            <title>
+            </title>
+          </head>
+          <body>
+If you would like to attach a resume or CV, please do so here. You may upload PDF or Word documents only.
+</body>
+        </html>
+      </v>
+    </p>
+  </part>
+  <part id="upl?r_ml_photoessay">
+    <p>
+      <k>help</k>
+      <v>
+        <html xmlns="http://www.w3.org/1999/xhtml">
+          <head>
+            <title>
+            </title>
+          </head>
+          <body>
+In addition to a statement of purpose, applicants are asked to submit a one page artist&#x2019;s statement describing the work included in their portfolio. In other words, the artist&#x2019;s statement should be about the work submitted, while the statement of purpose should address why you are seeking a graduate degree.&#xA0;
+</body>
+        </html>
+      </v>
+    </p>
+  </part>
+  <part id="payment_Application Fee">
+    <p>
+      <k>provider</k>
+      <v>slate</v>
+    </p>
+    <p>
+      <k>payment_account</k>
+      <v>710d264c-4e65-4778-aa6b-ada53b62b82f</v>
+    </p>
+  </part>
+  <part id="payment_Enrollment Deposit">
+    <p>
+      <k>provider</k>
+      <v>slate_test</v>
+    </p>
+    <p>
+      <k>payment_account</k>
+      <v>3730d906-4588-467a-aa07-9bd7141aa2ac</v>
+    </p>
+    <p>
+      <k>checking</k>
+      <v>0</v>
+    </p>
+    <p>
+      <k>credit</k>
+      <v>1</v>
+    </p>
+  </part>
+</application>
