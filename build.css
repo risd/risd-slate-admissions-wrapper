@@ -48,6 +48,24 @@
   --risd-caption-font-size: 12px;
   --risd-caption-line-height: 1.3;
   --risd-caption-letter-spacing: 0px;
+
+  /* spacing */
+  --risd-spacing-2x: 8px;
+  --risd-spacing-4x: 16px;
+  --risd-spacing-6x: 24px;
+  --risd-spacing-8x: 32px;
+  --risd-spacing-10x: 40px;
+  --risd-spacing-12x: 64px;
+  --risd-spacing-14x: 80px;
+
+  /* Call to Action : cta. both links and buttons */
+  --cta-border-width: 2px;
+  --cta-border-color-default: var(--risd-color-black);
+  --cta-border-color-active: var(--risd-color-blue);
+  --cta-background-color-default: var(--risd-color-white);
+  --cta-background-color-active: var(--risd-color-blue);
+  --cta-color-default: var(--risd-color-black);
+  --cta-color-active: var(--risd-color-white);
 }
 
 @media screen and (min-width: 768px) {
@@ -150,16 +168,46 @@ h5, .font-h3 {
 }
 
 body,
-:is(p, a, li, button),
+:is(p, a, li),
 .font-p {
   font-size: var(--risd-p-font-size);
   line-height: var(--risd-p-line-height);
   letter-spacing: var(--risd-p-letter-spacing);
 }
+a:is(:visited) {
+  color: var(--cta-color-default);
+  border-bottom: var(--cta-border-width) solid var(--risd-color-blue);
+}
+a:is(:hover, :focus, :active) {
+  color: var(--cta-color-active);
+}
 caption, .font-caption {
   font-size: var(--risd-caption-font-size);
   line-height: var(--risd-caption-line-height);
   letter-spacing: var(--risd-caption-letter-spacing);
+}
+
+label:is(.form_label),
+button:is(.default),
+.form-elements {
+  font-size: var(--risd-body-lg-font-size);
+  line-height: var(--risd-body-lg-line-height);
+  letter-spacing: var(--risd-body-lg-letter-spacing);
+}
+
+button:is(.default),
+.cta-elements {
+  border-width: var(--cta-border-width);
+  border-color: var(--cta-border-color-default);
+  background: var(--cta-background-color-default);
+  color: var(--cta-color-default);
+}
+
+button:is(.default):is(:hover, :active, :focus),
+.cta-elements:is(:hover, :acitve, :focus) {
+  border-color: var(--cta-border-color-active);
+  background: var(--cta-background-color-active);
+  color: var(--cta-color-active);
 }
 
 .c_background--about-section.cr {
