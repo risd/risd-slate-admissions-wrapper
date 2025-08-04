@@ -49,9 +49,9 @@
   --risd-caption-line-height: 1.3;
   --risd-caption-letter-spacing: 0px;
 
-  --form-element-font-size: var(--risd-body-lg-font-size);
-  --form-element-line-height: var(--risd-body-lg-line-height);
-  --form-element-letter-spacing: var(--risd-body-lg-letter-spacing);
+  --form-element-font-size: var(--risd-p-font-size);
+  --form-element-line-height: var(--risd-p-line-height);
+  --form-element-letter-spacing: var(--risd-p-letter-spacing);
 
   /* spacing */
   --risd-spacing-2x: 8px;
@@ -67,7 +67,14 @@
   --form-element-color: var(--risd-color-black);
   --form-element-border-width: 2px;
 
-  /* Call to Action : cta. both links and buttons */
+  /* Link style  */
+  --link-color-default: var(--risd-color-black);
+  --link-color-active: var(--risd-color-blue);
+  --link-border-color-default: var(--risd-color-blue);
+  --link-border-color-active: var(--risd-color-blue);
+  --link-border-width: 2px;
+
+  /* Call to Action : cta. both buttons and links that look like buttons */
   --cta-border-width: 2px;
   --cta-border-color-default: var(--risd-color-black);
   --cta-border-color-active: var(--risd-color-blue);
@@ -75,6 +82,9 @@
   --cta-background-color-active: var(--risd-color-blue);
   --cta-color-default: var(--risd-color-black);
   --cta-color-active: var(--risd-color-white);
+  --cta-padding: 15px;
+
+  --form-max-width: 30em;
 }
 
 @media screen and (min-width: 768px) {
@@ -182,16 +192,25 @@ h5, .font-h5 {
   letter-spacing: var(--risd-h5-letter-spacing);
 }
 .font-body-lg {
+  font-family: var(--risd-sans);
+  font-weight: var(--risd-body-font-weight);
+
   font-size: var(--risd-body-lg-font-size);
   line-height: var(--risd-body-lg-line-height);
   letter-spacing: var(--risd-body-lg-letter-spacing);
 }
 .font-body-xl {
+  font-family: var(--risd-sans);
+  font-weight: var(--risd-body-font-weight);
+
   font-size: var(--risd-body-xl-font-size);
   line-height: var(--risd-body-xl-line-height);
   letter-spacing: var(--risd-body-xl-letter-spacing);
 }
 .font-body-xxl {
+  font-family: var(--risd-sans);
+  font-weight: var(--risd-body-font-weight);
+
   font-size: var(--risd-body-xxl-font-size);
   line-height: var(--risd-body-xxl-line-height);
   letter-spacing: var(--risd-body-xxl-letter-spacing);
@@ -204,15 +223,21 @@ body,
   line-height: var(--risd-p-line-height);
   letter-spacing: var(--risd-p-letter-spacing);
 }
+
 :is(html, .no-touch, .supports-touch) :is(a, a:visited) {
-  color: var(--cta-color-default);
-  border-bottom: var(--cta-border-width) solid var(--cta-border-color-active);
+  color: var(--link-color-default);
+  border: none;
+  border-bottom: var(--link-border-width) solid var(--link-border-color-default);
   text-decoration: none;
   outline: 0px;
   background: none;
 }
 :is(html, .no-touch, .supports-touch) a:is(:hover, :focus, :active) {
-  color: var(--cta-border-color-active);
+  border-bottom-color: var(--link-border-color-active);
+  color: var(--link-color-active);
+}
+:is(html, .no-touch, .supports-touch) :is(a.risd-link-no-decoration, a.risd-link-no-decoration:visited) {
+  border-bottom: none;
 }
 caption, .font-caption {
   font-size: var(--risd-caption-font-size);
@@ -240,6 +265,7 @@ label.form_label span,
 div.form_label,
 div.form_label a,
 div.form_responses select,
+select,
 .form-elements {
   font-size: var(--form-element-font-size);
   line-height: var(--form-element-line-height);
@@ -262,37 +288,49 @@ input:is(
 }
 
 :is(html, .no-touch, .supports-touch) button:is(.default),
-.cta-elements {
+:is(html, .no-touch, .supports-touch) :is(.cta-elements, .risd-cta-element, .risd-cta-element:visited) {
+  padding: var(--cta-padding);
   border-style: solid;
+  border-radius: 0;
   border-width: var(--cta-border-width);
   border-color: var(--cta-border-color-default);
   background: var(--cta-background-color-default);
   color: var(--cta-color-default);
+  text-transform: uppercase;
 }
 
 button:is(.default):is(:hover, :active, :focus),
 :is(html, .no-touch, .supports-touch) button.default:hover,
-.cta-elements:is(:hover, :acitve, :focus) {
+.cta-elements:is(:hover, :acitve, :focus),
+:is(html, .no-touch, .supports-touch) .risd-cta-element:is(:hover, :acitve, :focus) {
   border-color: var(--cta-border-color-active);
+  border-bottom-color: var(--cta-border-color-active);
   background: var(--cta-background-color-active);
   color: var(--cta-color-active);
 }
 
-.form_container {
+.form_container,
+form#register_form table {
   width: 100%;
-  max-width: 40em;
+  max-width: var(--form-max-width);
 }
 
-.form_container :is(input, select, textarea) {
+.form_container :is(input, select, textarea),
+:is(input, select, textarea) {
   width: 100%;
 }
 
 .form_container .form_birthdate select,
-.form_container input[type="radio"] {
+fieldset#birthdate select,
+.form_container input[type="radio"],
+.form_container input[type="checkbox"],
+:is(input[type="checkbox"], input[type="radio"]),
+select + select,
+select:has(+ select) {
   width: auto;
 }
 
-:is(.html, no-touch, .supports-touch) div.form_question {
+:is(html, .no-touch, .supports-touch) div.form_question {
   margin-bottom: var(--form-question-spacing);
 }
 :is(div.form_label, label.form_label) + :is(div.form_responses, div.form_response) {
@@ -310,7 +348,8 @@ fieldset :is(div.form_label, label.form_label) {
   font-weight: normal;
 }
 
-div.form_responses select {
+div.form_responses select,
+select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -320,9 +359,8 @@ div.form_responses select {
   background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjYiIGhlaWdodD0iMjciIHZpZXdCb3g9IjAgMCAyNiAyNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzUwOTFfNzI0NSkiPgo8cGF0aCBkPSJNMi40Mzc1IDguNTAzOTFMMTIuNzc4OSAxOC44NDUzTDIzLjA5MTIgOC41MzMwNiIgc3Ryb2tlPSIjMTExMTExIiBzdHJva2Utd2lkdGg9IjQiLz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJjbGlwMF81MDkxXzcyNDUiPgo8cmVjdCB3aWR0aD0iMjYiIGhlaWdodD0iMjYiIGZpbGw9IndoaXRlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDAuMzc4OTA2KSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo=");
   background-repeat: no-repeat;
   background-position: right 21px center;
-  font-size: 22px;
+  font-size: var(--form-element-font-size);
   border-radius: 0px;
-  height: 58px;
 }
 :is(div.form_responses, div.form_response) textarea,
 textarea {
@@ -608,19 +646,45 @@ div#menu ul li a {
 .plupload_filelist_footer {
   height:43px !important;
 }
-ul.tabs li a {
-  height:30px;
-  font-size:14px;
-}
 .slide {
   height:auto !important;
   width:auto !important;
 }
 /* Application and Financial Aid Checklist tabs ... tabs too small,text is cut off  */
-#content ul.subtabs li a {
-  height:30px;
-  font-size:14px;
+ul.subtabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: var(--risd-spacing-4x);
 }
+ul:is(.tabs, .subtabs) :is(li, li:first-child, li:last-child) {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+ul:is(.tabs, .subtabs) li a {
+  --c666666FF: var(--link-color-default);
+  border: none;
+  font-size: var(--risd-p-font-size);
+  line-height: var(--risd-p-line-height);
+  letter-spacing: var(--risd-p-letter-spacing);
+  font-weight: var(--risd-body-font-weight);
+  color: var(--link-color-default);
+  text-decoration: none;
+  border-bottom: var(--link-border-width) solid var(--link-border-color-default);
+  margin: 0;
+  padding: 0;
+}
+
+ul:is(.tabs, .subtabs) li a:is(:active, :hover, :focus),
+ul.subtabs li a:hover {
+  --cFAFAFAFF: transparent;
+  --c679EFF: var(--link-color-active);
+  --c00669EFF: var(--link-color-active);
+  border-bottom-color: var(--link-border-color-active);
+  color: var(--link-color-active);
+}
+
 
 /* adjusting legend formatting to prevent problems with IE and Edge form display  */
 #content legend {
@@ -628,7 +692,7 @@ ul.tabs li a {
 }
 /* adjusting button input elements */
 button.default,button[type=button] {
-  padding:8px 15px;
+  padding: 8px 15px;
 }
 /* os likert styling for mobile */
 @media (max-width:799px) {
@@ -647,8 +711,25 @@ div.form_likert div.form_response[style*='8%'] {
   padding-right:5px;
 }
 
-:is(html, .no-touch,.supports-touch) :is(nav, footer) :is(a, a:link, a:visited, a:hover, a:active) {
+:is(html, .no-touch, .supports-touch) :is(.global-header-v2, nav, footer) :is(a, a:link, a:visited, a:hover, a:active) {
   text-decoration: none;
   border: none;
   border-bottom: none;
 }
+
+.statusUpdateBox > div {
+  padding: 40px 40px 30px;
+  border: 2px solid var(--risd-color-black);
+  background-color: var(--risd-color-white);
+  color: var(--risd-color-black);
+}
+
+div.form_header,
+div.form_header .form_label {
+  width: 100% !important;
+}
+
+:is(html, .no-touch, .supports-touch) div.form_header .form_label {
+  padding: 10px 20px;
+}
+
