@@ -53,6 +53,11 @@
   --form-element-line-height: var(--risd-p-line-height);
   --form-element-letter-spacing: var(--risd-p-letter-spacing);
 
+  --risd-letter-font-size: 11px;
+
+  --risd-transition-duration: 0.25s;
+  --risd-transition-easing: ease-out;
+
   /* spacing */
   --risd-spacing-2x: 8px;
   --risd-spacing-4x: 16px;
@@ -83,7 +88,12 @@
   --cta-color-default: var(--risd-color-black);
   --cta-color-active: var(--risd-color-white);
   --cta-padding: 15px;
+  --cta-transition-duration: var(--risd-transition-duration);
+  --cta-transition-easing: var(--risd-transition-easing);
+  --cta-transition: color var(--cta-transition-duration) var(--cta-transition-easing),
+    background-color var(--cta-transition-duration) var(--cta-transition-easing);
 
+  --body-max-width: 100%;
   --form-max-width: 30em;
 }
 
@@ -132,6 +142,8 @@
     --risd-caption-letter-spacing: 0px;
 
     --form-question-spacing: var(--risd-spacing-8x);
+
+    --body-max-width: 75%;
   }
 }
 
@@ -139,6 +151,7 @@
 .font-common-heading {
   font-family: var(--risd-serif);
   font-weight: var(--risd-heading-font-weight);
+  max-width: var(--body-max-width);
 }
 
 :is(
@@ -224,6 +237,10 @@ body,
   letter-spacing: var(--risd-p-letter-spacing);
 }
 
+:is(p, a, li, .font-p) {
+  max-width: var(--body-max-width);
+}
+
 :is(html, .no-touch, .supports-touch) :is(a, a:visited) {
   color: var(--link-color-default);
   border: none;
@@ -297,6 +314,7 @@ input:is(
   background: var(--cta-background-color-default);
   color: var(--cta-color-default);
   text-transform: uppercase;
+  transition: var(--cta-transition);
 }
 
 button:is(.default):is(:hover, :active, :focus),
@@ -311,13 +329,25 @@ button:is(.default):is(:hover, :active, :focus),
 
 .form_container,
 form#register_form table {
+  min-width: min(100%, var(--form-max-width));
+}
+
+.form_container :is(input, label, select, textarea),
+:is(input, label, select, textarea) {
   width: 100%;
   max-width: var(--form-max-width);
 }
 
-.form_container :is(input, select, textarea),
-:is(input, select, textarea) {
-  width: 100%;
+:is(html, .no-touch, .supports-touch) div.form_page input[type=password],
+:is(html, .no-touch, .supports-touch) div.form_page input[type=text],
+:is(html, .no-touch, .supports-touch) div.form_page input[type=email],
+:is(html, .no-touch, .supports-touch) div.form_page input[type=tel],
+:is(html, .no-touch, .supports-touch) div.form_page input[type=date],
+:is(html, .no-touch, .supports-touch) div.form_page input[type=time],
+:is(html, .no-touch, .supports-touch) div.form_page input:not([type]),
+:is(html, .no-touch, .supports-touch) div.form_page select,
+:is(html, .no-touch, .supports-touch) div.form_page textarea {
+  max-width: var(--form-max-width);
 }
 
 .form_container .form_birthdate select,
@@ -634,13 +664,28 @@ a,body,div.cr,footer.cr,h1,h2,h3,h4.cr,header.cr,html,main.cr,p.cr,section.cr {
   width:80%;
 }
 div#menu {
-  width:auto;
+  width: auto;
+}
+div#menu ul li {
+  max-width: 100%;
 }
 div#menu ul li a {
   width:100%;
-  min-width:100px;
-  padding:3px 0 5px 1px;
+  min-width: 100px;
+  max-width: 100%;
+  padding: 10px;
   overflow-wrap:break-word;
+  text-decoration: none;
+  background-color: color: var(--risd-color-white);
+  color: var(--risd-color-black);
+
+  transition: color var(--risd-transition-duration) var(--risd-transition-easing),
+    background-color var(--risd-transition-duration) var(--risd-transition-easing);
+}
+div#menu ul li a.selected,
+div#menu ul li a.selected:is(:visited, :focused, :active) {
+  background-color: var(--risd-color-blue);
+  color: var(--risd-color-white);
 }
 /* Adjust portfolio tabs at top and bottom for larger font and line height */
 .plupload_filelist_footer {
@@ -657,7 +702,7 @@ ul.subtabs {
   justify-content: start;
   gap: var(--risd-spacing-4x);
 }
-ul:is(.tabs, .subtabs) :is(li, li:first-child, li:last-child) {
+:is(html, .no-touch, .supports-touch) ul:is(.tabs, .subtabs) :is(li, li:first-child, li:last-child) {
   border: none;
   margin: 0;
   padding: 0;
@@ -674,6 +719,8 @@ ul:is(.tabs, .subtabs) li a {
   border-bottom: var(--link-border-width) solid var(--link-border-color-default);
   margin: 0;
   padding: 0;
+  white-space: nowrap;
+  max-width: 100%;
 }
 
 ul:is(.tabs, .subtabs) li a:is(:active, :hover, :focus),
@@ -727,9 +774,23 @@ div.form_likert div.form_response[style*='8%'] {
 div.form_header,
 div.form_header .form_label {
   width: 100% !important;
+  max-width: var(--form-max-width);
 }
 
 :is(html, .no-touch, .supports-touch) div.form_header .form_label {
   padding: 10px 20px;
 }
 
+.ui-datepicker :is(a, a:visited, a:hover, a:focus) {
+  border-bottom: none;
+}
+
+@media print {
+  :is(p, span, a, li),
+  .risd-letter :is(p, span, a, li),
+  .risd-letter-element {
+    font-family: var(--risd-sans);
+    font-weight: var(--risd-body-font-weight);
+    font-size: var(--risd-letter-font-size);
+  }  
+}

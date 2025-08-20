@@ -7,7 +7,7 @@
         <link href="/shared/build-fonts.css?v=20250630000000" rel="stylesheet" />
         <link href="/shared/build-mobile-global.css" rel="stylesheet" />
         <script src="/shared/build-mobile-global.js" />
-        <link href="/shared/build.css?v=20250728000027" rel="stylesheet" />
+        <link href="/shared/build.css?v=20250728000037" rel="stylesheet" />
         <style>html &gt; body { line-height: normal; } ul.cr, li.cr { margin: 0; padding: 0; } #content { clear: both; padding: 15px; } #global { float: right; } #global ul, #global li { list-style: none; margin: 0; padding: 0; }</style>
 
         <!-- risd media global nav : head : start -->
