@@ -159,6 +159,7 @@
   .font-body-xl,
   .font-body-xxl,
   p,
+  button,
   caption,
   input[type="email"],
   input[type="number"],
@@ -230,7 +231,7 @@ h5, .font-h5 {
 }
 
 body,
-:is(p, a, li),
+:is(p, a, li, b, em, strong),
 .font-p {
   font-size: var(--risd-p-font-size);
   line-height: var(--risd-p-line-height);
@@ -263,7 +264,7 @@ caption, .font-caption {
 }
 
 label:is(.form_label),
-:is(html, .no-touch, .supports-touch) button:is(.default),
+:is(html, .no-touch, .supports-touch) :is(button, button:is(.default, [type="button"])),
 input[type="email"],
 input[type="number"],
 input[type="password"],
@@ -304,7 +305,7 @@ input:is(
   padding: 0 var(--risd-spacing-4x) var(--risd-spacing-2x) 0;
 }
 
-:is(html, .no-touch, .supports-touch) button:is(.default),
+:is(html, .no-touch, .supports-touch) :is(button, button:is(.default, [type="button"])),
 :is(html, .no-touch, .supports-touch) :is(.cta-elements, .risd-cta-element, .risd-cta-element:visited) {
   padding: var(--cta-padding);
   border-style: solid;
@@ -317,7 +318,7 @@ input:is(
   transition: var(--cta-transition);
 }
 
-button:is(.default):is(:hover, :active, :focus),
+:is(button, button:is(.default, [type="button"])):is(:hover, :active, :focus),
 :is(html, .no-touch, .supports-touch) button.default:hover,
 .cta-elements:is(:hover, :acitve, :focus),
 :is(html, .no-touch, .supports-touch) .risd-cta-element:is(:hover, :acitve, :focus) {
@@ -327,8 +328,7 @@ button:is(.default):is(:hover, :active, :focus),
   color: var(--cta-color-active);
 }
 
-.form_container,
-form#register_form table {
+.form_container {
   min-width: min(100%, var(--form-max-width));
 }
 
@@ -355,7 +355,9 @@ fieldset#birthdate select,
 .form_container input[type="radio"],
 .form_container input[type="checkbox"],
 :is(input[type="checkbox"], input[type="radio"]),
+.form_responses select + select,
 select + select,
+.form_responses select:has(+ select),
 select:has(+ select) {
   width: auto;
 }
@@ -696,11 +698,12 @@ div#menu ul li a.selected:is(:visited, :focused, :active) {
   width:auto !important;
 }
 /* Application and Financial Aid Checklist tabs ... tabs too small,text is cut off  */
-ul.subtabs {
+ul:is(.tabs, .subtabs) {
   display: flex;
   flex-direction: row;
   justify-content: start;
   gap: var(--risd-spacing-4x);
+  border: 0;
 }
 :is(html, .no-touch, .supports-touch) ul:is(.tabs, .subtabs) :is(li, li:first-child, li:last-child) {
   border: none;
@@ -721,6 +724,7 @@ ul:is(.tabs, .subtabs) li a {
   padding: 0;
   white-space: nowrap;
   max-width: 100%;
+  height: auto;
 }
 
 ul:is(.tabs, .subtabs) li a:is(:active, :hover, :focus),
@@ -736,10 +740,6 @@ ul.subtabs li a:hover {
 /* adjusting legend formatting to prevent problems with IE and Edge form display  */
 #content legend {
   max-width:100%;
-}
-/* adjusting button input elements */
-button.default,button[type=button] {
-  padding: 8px 15px;
 }
 /* os likert styling for mobile */
 @media (max-width:799px) {
@@ -794,3 +794,23 @@ div.form_header .form_label {
     font-size: var(--risd-letter-font-size);
   }  
 }
+
+/* override base nonsense : start */
+tr.plain a {
+  color: var(--link-color-default) !important;
+  text-decoration: none !important;
+}
+tr.plain a:is(:hover, :focus, :active) {
+  color: var(--link-color-active) !important;
+}
+form > input,
+form > button {
+  margin-left: 0 !important;
+}
+form > select + input {
+  margin-top: var(--form-label-input-spacing);
+}
+form > input + button {
+  margin-top: var(--form-label-input-spacing);
+}
+/* override base nonsense : end */

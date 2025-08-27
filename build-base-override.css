@@ -1,3 +1,138 @@
 .c_page.cr {
   margin-top:  0;
 }
+
+form#register_form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--form-question-spacing);
+}
+form#register_form :is(p, h1 + p) {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+form#register_form table {
+  display: flex;
+  flex-direction: column;
+  min-width: min(100%, var(--form-max-width));
+}
+
+form#register_form :is(tbody, tr) {
+  display: flex;
+  flex-direction: column;
+}
+
+form#register_form tbody {
+  gap: var(--form-question-spacing);
+}
+
+form#register_form tr {
+  gap: var(--form-label-input-spacing);
+}
+
+form#register_form > table > * > tr > td {
+  padding: 0;
+}
+
+form#register_form fieldset>*:not(:last-child) {
+  margin-bottom: 0;
+}
+
+form#register_form :is(div.action, table+div.action) {
+  margin-top: 0;
+}
+
+table.table > thead > tr > td > :is(a, a:visited) {
+  color: var(--link-color-default) !important;
+  text-decoration: none !important;
+}
+table.table > thead > tr > td > a:is(:hover, :focus, :active) {
+  color: var(--link-color-active) !important;
+  text-decoration: none !important;
+}
+table.table > tbody > tr.hover > td * {
+  color: var(--risd-color-blue) !important;
+}
+
+:is(.form_page, .form_pages),
+.form_location_nopostal fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: var(--form-question-spacing);
+}
+
+:is(html,.no-touch,.supports-touch) .form_page div.form_question {
+  margin-bottom: 0;
+}
+
+.form_page div.form_question.form_header {
+  margin-bottom: 0;
+  margin-right: 0;
+}
+
+.form-pages {
+  display: flex;
+  flex-direction: column;
+  gap: var(--form-question-spacing);
+}
+
+.form_pages div.form_page+div.form_page {
+  margin-top: 0;
+}
+
+div.form_container div.form_question.form_layout_table.form_header .form_label {
+  padding: 10px;
+}
+
+@media screen and (min-width: 481px) {
+  html div.form_container div.form_question.form_layout_table {
+    display: flex;
+    flex-direction: column;
+    gap: var(--form-label-input-spacing);
+  }
+  html div.form_container div.form_question.form_layout_table .form_label {
+    display: block;
+    padding: 0;
+    width: auto;
+  }
+  html div.form_container div.form_question.form_layout_table .form_responses {
+    display: block;
+    padding: 0;
+  }
+  html div.form_container div.form_question.form_layout_table.form_header .form_label {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width:736px) {
+  div.form_question {
+    padding: 0 !important;
+  }
+}
+
+/* Form : Biographic Information App : Start */
+#form_ae56b3eb-230f-4b8d-b85f-d2514c25e05d div.form_response input[type='checkbox'] + label {
+  padding: 10px;
+}
+#form_ae56b3eb-230f-4b8d-b85f-d2514c25e05d input[type='checkbox']:checked + label {
+  background: var(--risd-color-blue);
+  color: var(--risd-color-white);
+}
+
+#form_ae56b3eb-230f-4b8d-b85f-d2514c25e05d div.form_response input + label {
+  margin-left: 0;
+}
+/* Form : Biographic Information App : End */
+
+.form_location_nopostal fieldset div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--form-label-input-spacing);
+}
+.form_location_nopostal fieldset div .form_label {
+  margin-bottom: 0;
+}
+.form_location_nopostal fieldset div .form_label + .form_response {
+  margin-top: 0;
+}

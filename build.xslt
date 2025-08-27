@@ -7,12 +7,12 @@
         <link href="/shared/build-fonts.css?v=20250630000000" rel="stylesheet" />
         <link href="/shared/build-mobile-global.css" rel="stylesheet" />
         <script src="/shared/build-mobile-global.js" />
-        <link href="/shared/build.css?v=20250728000037" rel="stylesheet" />
+        <link href="/shared/build.css?v=20250728000050" rel="stylesheet" />
         <style>html &gt; body { line-height: normal; } ul.cr, li.cr { margin: 0; padding: 0; } #content { clear: both; padding: 15px; } #global { float: right; } #global ul, #global li { list-style: none; margin: 0; padding: 0; }</style>
 
         <!-- risd media global nav : head : start -->
         <link rel="stylesheet" href="https://shared.risd.systems/global-v2/static/style.css?v=20250630000000" />
-        <link rel="stylesheet" href="/shared/build-base-override.css?v=20250630000000" />
+        <link rel="stylesheet" href="/shared/build-base-override.css?v=20250630000016" />
         <!-- risd media global nav : head : end -->
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" class="cr" />
