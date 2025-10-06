@@ -71,12 +71,6 @@ table.table > tbody > tr.hover > td * {
   margin-right: 0;
 }
 
-.form-pages {
-  display: flex;
-  flex-direction: column;
-  gap: var(--form-question-spacing);
-}
-
 .form_pages div.form_page+div.form_page {
   margin-top: 0;
 }
@@ -125,14 +119,36 @@ div.form_container div.form_question.form_layout_table.form_header .form_label {
 }
 /* Form : Biographic Information App : End */
 
-.form_location_nopostal fieldset div {
+.form_location_nopostal fieldset div:not(.form_label) {
   display: flex;
   flex-direction: column;
   gap: var(--form-label-input-spacing);
-}
-.form_location_nopostal fieldset div .form_label {
   margin-bottom: 0;
 }
-.form_location_nopostal fieldset div .form_label + .form_response {
+.form_location_nopostal fieldset .form_label {
+  margin-bottom: 0;
+}
+.form_location_nopostal fieldset .form_label + :is(.form_response, .form_responses) {
   margin-top: 0;
+}
+
+@media screen and (min-width: 481px) {
+  html div.form_container div.form_question.form_layout_table > fieldset:has(> div:not(.form_label, .form_response, .form_responses)) {
+    display: flex;
+    flex-direction: column;
+    gap: var(--form-question-spacing);
+  }
+  html div.form_container div.form_question.form_layout_table > fieldset > div:not(.form_label, .form_response, .form_responses) {
+    display: flex;
+    flex-direction: column;
+    gap: var(--form-label-input-spacing);
+    margin-bottom: 0;
+  }
+}
+
+/* not sure where this font def is coming from */
+#part_d8eefe4a-7ffd-4844-83ae-2a9d74d03f3e font,
+#part_fe02ee91-4c22-4ef1-ae06-e5d5e2397588 font,
+#part_66d36b63-158e-4524-b217-8e010c606c07 font {
+  color: var(--risd-color-black);
 }

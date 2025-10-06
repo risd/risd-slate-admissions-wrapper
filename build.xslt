@@ -12,7 +12,7 @@
 
         <!-- risd media global nav : head : start -->
         <link rel="stylesheet" href="https://shared.risd.systems/global-v2/static/style.css?v=20250630000000" />
-        <link rel="stylesheet" href="/shared/build-base-override.css?v=20250630000016" />
+        <link rel="stylesheet" href="/shared/build-base-override.css?v=20250630000028" />
         <!-- risd media global nav : head : end -->
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" class="cr" />
