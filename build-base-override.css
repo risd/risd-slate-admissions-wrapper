@@ -2,130 +2,153 @@
   margin-top:  0;
 }
 
-.no-touch .global-header .primary-nav__back:hover {
-  background-color: white;
+form#register_form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--form-question-spacing);
+}
+form#register_form :is(p, h1 + p) {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-.no-touch .global-header .primary-nav__link-toggle:hover {
-  background-color:  transparent;
+form#register_form table {
+  display: flex;
+  flex-direction: column;
+  min-width: min(100%, var(--form-max-width));
 }
 
-.global-header button {
+form#register_form :is(tbody, tr) {
+  display: flex;
+  flex-direction: column;
+}
+
+form#register_form tbody {
+  gap: var(--form-question-spacing);
+}
+
+form#register_form tr {
+  gap: var(--form-label-input-spacing);
+}
+
+form#register_form > table > * > tr > td {
   padding: 0;
 }
 
-.global-header .wordmark {
-  fill: white;
+form#register_form fieldset>*:not(:last-child) {
+  margin-bottom: 0;
 }
 
-.global-header #edit-search-site {
-  font-family: "Mercury Display A", "Mercury Display B", Georgia, serif !important;
+form#register_form :is(div.action, table+div.action) {
+  margin-top: 0;
 }
 
-.global-header input[type="text"] {
-  padding: 0;
+table.table > thead > tr > td > :is(a, a:visited) {
+  color: var(--link-color-default) !important;
+  text-decoration: none !important;
+}
+table.table > thead > tr > td > a:is(:hover, :focus, :active) {
+  color: var(--link-color-active) !important;
+  text-decoration: none !important;
+}
+table.table > tbody > tr.hover > td * {
+  color: var(--risd-color-blue) !important;
 }
 
-.global-header #edit-actions-submit:hover {
-  background-color: white;
-}
-
-.global-header .utility-nav__item {
-  padding-left: 0;
-}
-
-.site__footer-simplified {
-  position: relative;
-  z-index: 500;
-  display: -ms-flexbox;
+:is(.form_page, .form_pages),
+.form_location_nopostal fieldset {
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: center;
-      justify-content: center;
-  padding: calc(16px * 6) 0 calc(16px * 4);
-  background-color: black;
-  color: white;
+  flex-direction: column;
+  gap: var(--form-question-spacing);
 }
 
-.site__footer-simplified .footer__container {
-  display: -ms-flexbox;
-  display: flex;
-  max-width: 1152px;
-  -ms-flex-preferred-size: 90%;
-      flex-basis: 90%;
-  -ms-flex-flow: column wrap;
-      flex-flow: column wrap;
-  -ms-flex-align: center;
-      align-items: center;
-  margin-right: auto;
-  margin-left: auto;
+:is(html,.no-touch,.supports-touch) .form_page div.form_question {
+  margin-bottom: 0;
 }
-@media screen and (min-width: 513px) {
-  .site__footer-simplified .footer__container {
-    -ms-flex-preferred-size: 95%;
-        flex-basis: 95%;
-    -ms-flex-direction: row;
-        flex-direction: row;
-    -ms-flex-align: stretch;
-        align-items: stretch;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
+
+.form_page div.form_question.form_header {
+  margin-bottom: 0;
+  margin-right: 0;
+}
+
+.form_pages div.form_page+div.form_page {
+  margin-top: 0;
+}
+
+div.form_container div.form_question.form_layout_table.form_header .form_label {
+  padding: 10px;
+}
+
+@media screen and (min-width: 481px) {
+  html div.form_container div.form_question.form_layout_table {
+    display: flex;
+    flex-direction: column;
+    gap: var(--form-label-input-spacing);
+  }
+  html div.form_container div.form_question.form_layout_table .form_label {
+    display: block;
+    padding: 0;
+    width: auto;
+  }
+  html div.form_container div.form_question.form_layout_table .form_responses {
+    display: block;
+    padding: 0;
+  }
+  html div.form_container div.form_question.form_layout_table.form_header .form_label {
+    padding: 10px;
   }
 }
-@media screen and (min-width: 1025px) {
-  .site__footer-simplified .footer__container {
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+
+@media only screen and (max-width:736px) {
+  div.form_question {
+    padding: 0 !important;
   }
 }
 
-.site__footer-simplified .footer__logo {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0; }
-  .site__footer-simplified .footer__logo img {
-    max-width: 130px;
-    height: auto; }
-  .site__footer-simplified .footer__logo svg {
-    height: auto; }
-  .site__footer-simplified .footer__logo path,
-  .site__footer-simplified .footer__logo circle {
-    fill: rgb(85, 85, 85); }
+/* Form : Biographic Information App : Start */
+#form_ae56b3eb-230f-4b8d-b85f-d2514c25e05d div.form_response input[type='checkbox'] + label {
+  padding: 10px;
+}
+#form_ae56b3eb-230f-4b8d-b85f-d2514c25e05d input[type='checkbox']:checked + label {
+  background: var(--risd-color-blue);
+  color: var(--risd-color-white);
+}
 
-.site__footer-simplified .footer__logo--simplified {
-  display: block;
-  width: 70px; }
-  @media screen and (min-width: 513px) {
-    .site__footer-simplified .footer__logo--simplified {
-      display: none; } }
+#form_ae56b3eb-230f-4b8d-b85f-d2514c25e05d div.form_response input + label {
+  margin-left: 0;
+}
+/* Form : Biographic Information App : End */
 
-.site__footer-simplified .footer__logo--full {
-  display: none;
-  width: 207px; }
-  @media screen and (min-width: 513px) {
-    .site__footer-simplified .footer__logo--full {
-      display: block; } }
+.form_location_nopostal fieldset div:not(.form_label) {
+  display: flex;
+  flex-direction: column;
+  gap: var(--form-label-input-spacing);
+  margin-bottom: 0;
+}
+.form_location_nopostal fieldset .form_label {
+  margin-bottom: 0;
+}
+.form_location_nopostal fieldset .form_label + :is(.form_response, .form_responses) {
+  margin-top: 0;
+}
 
-.site__footer-simplified .footer__copyright {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  -ms-flex-preferred-size: 90%;
-      flex-basis: 90%;
-  padding: 16px 0;
-  margin-top: 16px;
-  color: rgb(85, 85, 85);
-  text-align: center; }
-  @media screen and (min-width: 513px) {
-    .site__footer-simplified .footer__copyright {
-      -ms-flex-preferred-size: 95%;
-          flex-basis: 95%; } }
-  @media screen and (min-width: 1025px) {
-    .site__footer-simplified .footer__copyright {
-      -ms-flex-preferred-size: 100%;
-          flex-basis: 100%; } }
+@media screen and (min-width: 481px) {
+  html div.form_container div.form_question.form_layout_table > fieldset:has(> div:not(.form_label, .form_response, .form_responses)) {
+    display: flex;
+    flex-direction: column;
+    gap: var(--form-question-spacing);
+  }
+  html div.form_container div.form_question.form_layout_table > fieldset > div:not(.form_label, .form_response, .form_responses) {
+    display: flex;
+    flex-direction: column;
+    gap: var(--form-label-input-spacing);
+    margin-bottom: 0;
+  }
+}
 
-/* hide featured sites section for fear of being out of sync with  www */
-.global-header .utility-nav {
-  display:  none;
+/* not sure where this font def is coming from */
+#part_d8eefe4a-7ffd-4844-83ae-2a9d74d03f3e font,
+#part_fe02ee91-4c22-4ef1-ae06-e5d5e2397588 font,
+#part_66d36b63-158e-4524-b217-8e010c606c07 font {
+  color: var(--risd-color-black);
 }
